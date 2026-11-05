@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "Budget Backpacker",
+        "description": "Perfect for travellers who want to explore more while spending less.",
+        "pricePerDay": 150,
+        "regionMultiplier": { "Asia": 1, "Europe": 1.8, "Oceania": 1.6, "Americas": 1.7, "Africa": 1.2 },
+        "includes": ["Budget accommodation", "Public transportation", "Basic meals", "Free travel activities"],
+        "tag": "Budget Friendly"
+    },
+    {
+        "id": 2,
+        "name": "Standard Explorer",
+        "description": "A comfortable travel experience with a balanced budget.",
+        "pricePerDay": 300,
+        "regionMultiplier": { "Asia": 1, "Europe": 1.8, "Oceania": 1.6, "Americas": 1.7, "Africa": 1.2 },
+        "includes": ["3-star accommodation", "Transportation", "Daily meals", "Selected attractions"],
+        "tag": "Most Popular"
+    },
+    {
+        "id": 3,
+        "name": "Premium Escape",
+        "description": "Enjoy extra comfort and memorable travel experiences.",
+        "pricePerDay": 600,
+        "regionMultiplier": { "Asia": 1, "Europe": 1.8, "Oceania": 1.6, "Americas": 1.7, "Africa": 1.2 },
+        "includes": ["4-star accommodation", "Private transportation", "Premium meals", "Guided tours"],
+        "tag": "Premium"
+    },
+    {
+        "id": 4,
+        "name": "Luxury Getaway",
+        "description": "The ultimate holiday experience with luxurious services.",
+        "pricePerDay": 1200,
+        "regionMultiplier": { "Asia": 1, "Europe": 1.8, "Oceania": 1.6, "Americas": 1.7, "Africa": 1.2 },
+        "includes": ["5-star accommodation", "Private transfers", "Fine dining", "Exclusive experiences"],
+        "tag": "Luxury"
+    }
+]

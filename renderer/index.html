@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JomJalan | Explore Your Next Adventure</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-icon">J</div>
+                <div>
+                    <h2>JomJalan</h2>
+                    <span>Travel made memorable</span>
+                </div>
+            </div>
+            <div class="sidebar-label">MENU</div>
+            <nav>
+                <a href="index.html" class="nav-link active">Explore</a>
+                <a href="plans.html" class="nav-link">My Travel Plans</a>
+            </nav>
+            <div class="sidebar-bottom">
+                <div class="sidebar-card">
+                    <h3>Adventure awaits!</h3>
+                    <p>Discover new places and create unforgettable memories.</p>
+                </div>
+                <p class="sidebar-footer">JomJalan</p>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div>
+                    <p class="small-heading">YOUR NEXT ADVENTURE STARTS HERE</p>
+                    <h1>Explore the world <span>with us.</span></h1>
+                </div>
+                <div class="topbar-badge">
+                    <div>
+                        <strong>Travel Explorer</strong>
+                        <small>Plan your next journey</small>
+                    </div>
+                </div>
+            </header>
+
+            <section class="hero">
+                <div class="hero-content">
+                    <span class="hero-tag">LET'S EXPLORE</span>
+                    <h2>Collect moments,<br>not just destinations.</h2>
+                    <p>Discover beautiful destinations, check the weather and plan your perfect getaway with JomJalan.</p>
+                    <a href="#destination-section" class="hero-button">Start Exploring</a>
+                </div>
+            </section>
+
+            <section class="section" id="destination-section">
+                <div class="section-heading">
+                    <div>
+                        <p class="section-subtitle">FIND YOUR DESTINATION</p>
+                        <h2>Where would you like to go?</h2>
+                    </div>
+                </div>
+                <div class="destination-search">
+                    <div class="search-input">
+                        <img id="flagPreview" class="flag-preview hidden" alt="">
+                        <select id="countrySelect">
+                            <option value="">Select your destination</option>
+                            <option value="JP">Japan</option>
+                            <option value="KR">South Korea</option>
+                            <option value="TH">Thailand</option>
+                            <option value="SG">Singapore</option>
+                            <option value="ID">Indonesia</option>
+                            <option value="CN">China</option>
+                            <option value="IN">India</option>
+                            <option value="TR">Turkey</option>
+                            <option value="GB">United Kingdom</option>
+                            <option value="FR">France</option>
+                            <option value="IT">Italy</option>
+                            <option value="ES">Spain</option>
+                            <option value="DE">Germany</option>
+                            <option value="AU">Australia</option>
+                            <option value="NZ">New Zealand</option>
+                            <option value="US">United States</option>
+                            <option value="CA">Canada</option>
+                        </select>
+                    </div>
+                    <button id="exploreBtn" class="primary-button">Explore Destination</button>
+                </div>
+                <p id="loadingMessage" class="loading-message"></p>
+                <p id="errorMessage" class="error-message"></p>
+            </section>
+
+            <section id="countrySection" class="section hidden">
+                <div class="section-heading">
+                    <div>
+                        <p class="section-subtitle">DESTINATION OVERVIEW</p>
+                        <h2>Discover your destination</h2>
+                    </div>
+                </div>
+                <div class="country-card">
+                    <div class="country-main">
+                        <div class="country-flag"><img id="countryFlag" alt=""></div>
+                        <div>
+                            <h2 id="countryName">Country Name</h2>
+                            <p id="countryRegion">Region</p>
+                        </div>
+                    </div>
+                    <div class="country-details">
+                        <div class="info-box">
+                            <small>Capital</small>
+                            <strong id="countryCapital">-</strong>
+                        </div>
+                        <div class="info-box">
+                            <small>Population</small>
+                            <strong id="countryPopulation">-</strong>
+                        </div>
+                        <div class="info-box">
+                            <small>Currency</small>
+                            <strong id="countryCurrency">-</strong>
+                        </div>
+                        <div class="info-box">
+                            <small>Language</small>
+                            <strong id="countryLanguage">-</strong>
+                        </div>
+                    </div>
+                    <p id="countryDescription" class="country-description">Country information will appear here.</p>
+                    <a id="wikiLink" href="#" target="_blank" class="text-link">Read more about this country</a>
+                </div>
+            </section>
+
+            <section id="weatherSection" class="section hidden">
+                <div class="section-heading">
+                    <div>
+                        <p class="section-subtitle">CHECK BEFORE YOU TRAVEL</p>
+                        <h2>Today's weather</h2>
+                    </div>
+                    <span class="live-label">LIVE WEATHER</span>
+                </div>
+                <div class="weather-card">
+                    <div class="weather-main">
+                        <div>
+                            <h2 id="weatherTemperature">--°C</h2>
+                            <p id="weatherDescription">Weather information</p>
+                            <small id="weatherLocation">Destination</small>
+                        </div>
+                    </div>
+                    <div class="weather-details">
+                        <div>
+                            <small>Feels like</small>
+                            <strong id="feelsLike">--°C</strong>
+                        </div>
+                        <div>
+                            <small>Humidity</small>
+                            <strong id="humidity">--%</strong>
+                        </div>
+                        <div>
+                            <small>Wind speed</small>
+                            <strong id="windSpeed">-- km/h</strong>
+                        </div>
+                        <div>
+                            <small>Precipitation</small>
+                            <strong id="precipitation">-- mm</strong>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="activitySection" class="section hidden">
+                <div class="section-heading">
+                    <div>
+                        <p class="section-subtitle">PERSONALISED RECOMMENDATIONS</p>
+                        <h2>Things you can do</h2>
+                    </div>
+                </div>
+                <div class="activity-card">
+                    <div>
+                        <h3 id="activityTitle">Travel recommendations</h3>
+                        <p id="activitySuggestion">Select a destination to discover suggested activities.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="holidaySection" class="section hidden">
+                <div class="section-heading">
+                    <div>
+                        <p class="section-subtitle">PLAN YOUR JOURNEY</p>
+                        <h2>Upcoming public holidays</h2>
+                    </div>
+                </div>
+                <div id="holidayList" class="holiday-list">No holiday information available.</div>
+            </section>
+
+            <section class="section" id="packagesSection">
+                <div class="section-heading">
+                    <div>
+                        <p class="section-subtitle">CHOOSE YOUR EXPERIENCE</p>
+                        <h2>Travel packages</h2>
+                    </div>
+                </div>
+                <div id="packageContainer" class="package-grid">
+                    <p>Loading travel packages...</p>
+                </div>
+            </section>
+
+            <section class="section" id="calculatorSection">
+                <div class="section-heading">
+                    <div>
+                        <p class="section-subtitle">PLAN YOUR BUDGET</p>
+                        <h2>Travel budget calculator</h2>
+                    </div>
+                </div>
+                <div class="calculator-card">
+                    <div class="calculator-form">
+                        <div class="form-group">
+                            <label for="calculatorPackage">Travel Package</label>
+                            <select id="calculatorPackage">
+                                <option value="">Select package</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="travelDays">Travel Duration</label>
+                                <input type="number" id="travelDays" min="1" max="365" value="3" placeholder="Number of days">
+                            </div>
+                            <div class="form-group">
+                                <label for="travellers">Travellers</label>
+                                <input type="number" id="travellers" min="1" max="100" value="2" placeholder="Number of travellers">
+                            </div>
+                        </div>
+                        <button id="calculateBtn" class="primary-button full-button">Calculate My Budget</button>
+                    </div>
+                    <div class="calculation-result">
+                        <p>Estimated total budget</p>
+                        <h2 id="totalBudget">RM 0.00</h2>
+                        <small id="calculationDetails">Your estimated travel cost will appear here.</small>
+                        <p id="localCurrency" class="currency-result"></p>
+                        <button id="savePlanBtn" class="secondary-button" disabled>Save This Travel Plan</button>
+                        <p id="saveMessage" class="success-message"></p>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="main-footer">
+                <p>Made by hzwniffh | Your journey, your story.</p>
+            </footer>
+        </main>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JomJalan | My Travel Plans</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-icon">J</div>
+                <div>
+                    <h2>JomJalan</h2>
+                    <span>Travel made memorable</span>
+                </div>
+            </div>
+            <div class="sidebar-label">MENU</div>
+            <nav>
+                <a href="index.html" class="nav-link">Explore</a>
+                <a href="plans.html" class="nav-link active">My Travel Plans</a>
+            </nav>
+            <div class="sidebar-bottom">
+                <div class="sidebar-card">
+                    <h3>Your journey matters!</h3>
+                    <p>Keep your travel plans organised in one place.</p>
+                </div>
+                <p class="sidebar-footer">JomJalan</p>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div>
+                    <p class="small-heading">YOUR PERSONAL TRAVEL COLLECTION</p>
+                    <h1>My Travel <span>Plans.</span></h1>
+                </div>
+                <a href="index.html" class="primary-button">+ Create New Plan</a>
+            </header>
+
+            <section class="summary-grid">
+                <div class="summary-card">
+                    <small>Total Travel Plans</small>
+                    <h2 id="totalPlans">0</h2>
+                </div>
+                <div class="summary-card">
+                    <small>Destinations</small>
+                    <h2 id="totalDestinations">0</h2>
+                </div>
+                <div class="summary-card">
+                    <small>Total Estimated Budget</small>
+                    <h2 id="totalSpending">RM 0.00</h2>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="section-heading">
+                    <div>
+                        <p class="section-subtitle">ALL YOUR SAVED JOURNEYS</p>
+                        <h2>Travel plan collection</h2>
+                    </div>
+                    <button id="refreshBtn" class="secondary-button">Refresh</button>
+                </div>
+                <div id="plansContainer" class="plans-grid">
+                    <p>Loading your travel plans...</p>
+                </div>
+            </section>
+
+            <footer class="main-footer">
+                <p>Made by hzwniffh</p>
+            </footer>
+        </main>
+    </div>
+
+    <div id="editModal" class="modal hidden">
+        <div class="modal-content">
+            <button id="closeModalBtn" class="modal-close">×</button>
+            <p class="section-subtitle">UPDATE YOUR JOURNEY</p>
+            <h2>Edit Travel Plan</h2>
+            <input type="hidden" id="editPlanId">
+            <div class="form-group">
+                <label for="editCountry">Destination</label>
+                <input type="text" id="editCountry" readonly>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="editDays">Travel Duration</label>
+                    <input type="number" id="editDays" min="1" max="365">
+                </div>
+                <div class="form-group">
+                    <label for="editTravellers">Travellers</label>
+                    <input type="number" id="editTravellers" min="1" max="100">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="editNotes">Travel Notes</label>
+                <textarea id="editNotes" rows="4" placeholder="Write your travel notes here..."></textarea>
+            </div>
+            <button id="updatePlanBtn" class="primary-button full-button">Save Changes</button>
+        </div>
+    </div>
+
+    <script src="plans.js"></script>
+</body>
+</html>
